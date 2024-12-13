@@ -7,12 +7,9 @@
 </head>
 <body>
 <div>
-    <th:block th:each="msg : ${messages}">
-        <span th:text="${msg}"></span>
+    <th:block th:each="car : ${cars}">
+        <h1 th:text="${car}"></h1>
     </th:block>
-</div>
-<div>
-    <a href="/cars">Show all cars</a>
 </div>
 </body>
 </html>
