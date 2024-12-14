@@ -3,13 +3,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>List of cars</title>
 </head>
 <body>
 <div>
-    <th:block th:each="car : ${cars}">
-        <h1 th:text="${car}"></h1>
-    </th:block>
+    <table>
+        <caption style="font-size: 25px; font-weight: bold">List of cars</caption>
+        <tr style="background-color: teal; font-size: 20px">
+            <th>Id</th>
+            <th>Model</th>
+            <th>Colour</th>
+        </tr>
+        <th:block th:each="car : ${cars}">
+            <tr style="background-color: aquamarine; font-size: 18px">
+                <td th:text ="${car.getId()}"></td>
+                <td th:text ="${car.getModel()}"></td>
+                <td th:text ="${car.getColour()}"></td>
+            </tr>
+        </th:block>
+    </table>
 </div>
 </body>
 </html>

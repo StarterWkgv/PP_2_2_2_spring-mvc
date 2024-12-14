@@ -14,7 +14,7 @@ public class CarServiceImp implements CarService {
     {
         List<String> colour = List.of("green", "black", "yellow", "white", "blue");
         list = IntStream.rangeClosed(1, 5)
-                .mapToObj(i -> new Car(i, "Car " + i, colour.get((int)(Math.random() * 4) + 1))).toList();
+                .mapToObj(i -> new Car(i, "Car " + i, colour.get((int) (Math.random() * 4) + 1))).toList();
     }
 
     @Override
